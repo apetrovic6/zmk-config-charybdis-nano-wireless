@@ -143,7 +143,7 @@
           util_layer {
                display-name = "Util";
                bindings = <
-     &studio_unlock  &trans         &kp KP_NUMLOCK  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+     &trans  &trans         &kp KP_NUMLOCK  &trans  &trans    &trans  &trans  &trans  &trans  &trans
      &trans          &trans         &trans          &trans  &trans    &trans  &trans  &trans  &trans  &trans
      &trans          &kp LG(LS(S))  &kp DEL         &trans  &trans    &trans  &trans  &trans  &trans  &trans
                                     &trans          &trans  &trans    &trans  &trans
