@@ -37,6 +37,56 @@
 / {
 
 
+  behaviors {
+           hm: homerow_mods {
+               compatible = "zmk,behavior-hold-tap";
+               #binding-cells = <2>;
+               tapping-term-ms = <200>;
+               flavor = "tap-preferred";
+               bindings = <&kp>, <&kp>;
+           };
+
+           kp_sl: behavior_kp_sl {
+               compatible = "zmk,behavior-hold-tap";
+               #binding-cells = <2>;
+               flavor = "hold-preferred";
+               tapping-term-ms = <200>;
+               bindings = <&sl>, <&kp>;
+           };
+
+           ht: behavior_hold_tap_key {
+               compatible = "zmk,behavior-hold-tap";
+               #binding-cells = <2>;
+               flavor = "hold-preferred";
+               tapping-term-ms = <200>;
+               bindings = <&kp>, <&kp>;
+           };
+       };
+
+       conditional_layers {
+           compatible = "zmk,conditional-layers";
+
+           settings_trigger {
+               if-layers = <1 4>;
+               then-layer = <6>;
+           };
+       };
+
+       combos {
+           compatible = "zmk,combos";
+
+           KP_Z {
+               bindings = <&kp Z>;
+               key-positions = <0 1>;
+           };
+
+           KP_Q {
+               bindings = <&kp Q>;
+               key-positions = <1 2>;
+           };
+       };
+
+
     keymap {
         compatible = "zmk,keymap";
 
